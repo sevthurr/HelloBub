@@ -1,0 +1,271 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+  }
+  
+  /* Quiz container */
+  .quiz-container {
+    background-color: rgba(255, 79, 90, 1);
+    display: flex;
+    padding-bottom: 161px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Header section */
+  .quiz-header {
+    background-color: #ffecee;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    padding: 0 53px;
+    align-items: center;
+    gap: 20px;
+    color: #ff4f5a;
+    font-weight: 700;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 60px;
+    box-sizing: border-box;
+  }
+  
+  .brand-name {
+    color: #ff4f5a;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .nav-link {
+    color: #ff4f5a;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: #d93c47;
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  .quiz-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .recipient-name {
+    color: rgba(0, 0, 0, 1);
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 90px;
+    margin-left: 43px;
+  }
+  
+  .invitation-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: 64px;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-left: 43px;
+  }
+  
+  .image-container {
+    border-radius: 30px;
+    background-color: rgba(255, 236, 238, 0.64);
+    display: flex;
+    margin-top: 32px;
+    margin-left: 43px;
+    width: 347px;
+    max-width: 100%;
+    padding: 40px 24px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+  
+  .invitation-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+  }
+  
+  .song-title {
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 19px;
+    margin-left: 47px;
+  }
+  
+  .artist-name {
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 45px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    margin-top: 62px;
+    margin-left: 49px;
+    width: 520px;
+    max-width: 100%;
+    align-items: start;
+    gap: 20px;
+    font-size: 24px;
+    color: rgba(255, 79, 90, 1);
+    font-weight: 700;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .response-button {
+    border-radius: 30px;
+    background-color: rgba(255, 236, 238, 1);
+    padding: 11px 52px;
+    white-space: nowrap;
+    text-align: center;
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    color: rgba(255, 79, 90, 1);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .response-button-extended {
+    padding: 11px 36px;
+  }
+  
+  /* Slowdance section */
+  .slowdance-centered {
+    align-items: center !important;
+    justify-content: center !important;
+    padding-bottom: 80px;
+  }
+  
+  .slowdance-centered-content {
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .slowdance-image-center {
+    margin: 32px auto 0 auto !important;
+    margin-left: 0 !important;
+  }
+  
+  .slowdance-song-title,
+  .slowdance-artist-name {
+    text-align: center;
+    margin-left: 0 !important;
+  }
+  
+  .slowdance-action-buttons {
+    justify-content: center !important;
+    margin-left: 0 !important;
+    width: 100%;
+    gap: 32px;
+  }
+  
+  #slowdanceAudio {
+    display: block;
+    margin: 32px auto 0 auto;
+    width: 320px;
+    background: #ffecee;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  
+  .chevron-divider {
+    border: none;
+    border-top: 2px solid #ffecee;
+    margin: 24px auto 0 auto;
+    width: 80px;
+    opacity: 1;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .quiz-container {
+      padding-bottom: 100px;
+    }
+  
+    .quiz-header {
+      padding: 0 20px;
+      height: 60px;
+    }
+  
+    .navigation {
+      gap: 40px;
+    }
+  
+    .brand-name {
+      font-size: 22px;
+    }
+  
+    .recipient-name {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+  
+    .invitation-text {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  
+    .image-container {
+      padding: 40px 20px;
+    }
+  
+    .action-buttons {
+      margin-top: 40px;
+    }
+  
+    .response-button {
+      padding: 11px 20px;
+      white-space: initial;
+    }
+  
+    .response-button-extended {
+      padding: 11px 20px;
+    }
+  }
