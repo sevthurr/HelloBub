@@ -166,10 +166,22 @@
     font-weight: 700;
     border: none;
     cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .response-button:hover {
+    background: #d93c47;
+    color: #fff;
   }
   
   .response-button-extended {
     padding: 11px 36px;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .response-button-extended:hover {
+        background: #d93c47;
+    color: #fff;
   }
   
   /* Slowdance section */
@@ -263,9 +275,14 @@
     .response-button {
       padding: 11px 20px;
       white-space: initial;
+      
     }
   
     .response-button-extended {
       padding: 11px 20px;
     }
+
+
   }
+
+

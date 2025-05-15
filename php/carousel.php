@@ -12,6 +12,7 @@ require_once 'session_check.php';
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/carousel.css" />
   </head>
   <body>
@@ -22,6 +23,7 @@ require_once 'session_check.php';
           <a href="carousel.php" class="nav-link">Carousel</a>
           <a href="quiz.php" class="nav-link">Cute Quiz</a>
           <a href="letter.php" class="nav-link">Read Me</a>
+          <a href="login.php" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i></a>
         </nav>
       </header>
       <main class="main-content">
@@ -112,16 +114,16 @@ require_once 'session_check.php';
       // Messages for each carousel image (index 0-10)
       const carouselMessages = [
         "Our first month was the simplest but also one of the most memorable celebrations that I had with you. It was the time we started our cute tradition of taking photobooth pictures in every month we were together. This image may have the lowest quality (it's what you get with 70 pesos, lol), but I love how you made your copy even cuter. I wish I have it though. Hmpp!",
-        "Second month, second photobooth! I remember how excited we were to keep this tradition going. Each photo is a little snapshot of our growing love and silliness together.",
-        "Third month already! Time flies when I'm with you. This photo always makes me smile because of how goofy we looked trying to fit in the frame.",
-        "Fourth month, and our collection keeps growing. I love looking back at these and seeing how much closer we've become.",
-        "Fifth month! Halfway to a year. This one is extra special because of the little doodles you added on your copy. So cute!",
-        "Sixth month, and still going strong. I cherish every memory we make, and every photobooth picture is a treasure.",
-        "Seventh month! I love how we always find time for our little tradition, no matter how busy life gets.",
-        "Eighth month, and our smiles just keep getting bigger. Thank you for always making these moments so fun.",
-        "Ninth month! Almost a year. This photo reminds me of how much we've grown together and all the laughter we've shared.",
-        "Tenth month, and our photobooth strip is almost complete. I can't wait to see what the next months bring.",
-        "Eleventh month! One more to a year. Looking at all these photos, I feel so grateful to have you by my side. Love you always!"
+        "Second month, second photobooth! I remember how excited we were to keep this tradition going. This is also the first time we found a decent photobooth (shoutout to Sari-sari). I remember this celebration because it’s one of the cutest dates we had! I honestly think this is our best date so far (no offense to the other dates ah). I hope maka-paint by numbers date ta again soon~",
+        "This was our first (and last) time trying the photobooth as SM Lanang. Was actually surprised naa didtoa, I remember nag-hope pa ta na naa tay makita convenient nga photobooth back then, and surprisingly, there is! This wasn’t exactly an easy month for us, both mentally and financially. But, hey, nag-dine pa ta’g Tokyo Tokyo ani. How abundant! (kiss me if I’m wrong.) ( ˘ ³˘)♥︎",
+        "Trying the most hyped photobooth in Davao, lol! Do you think it was worth it? Because I do. Gwapa man gud akong ka-picture, tas na-post pajud ang behind-the-scenes ani sa TikTok. In response to Stan Lee’s, you really made a difference, lovie. You made my life a whole lot better. (˶˘ ³˘(´͈ ᵕ `͈˶)",
+        "Fifth month! Halfway to a year. This date was a little tough kay you know what happened, lol! But I’m glad we did this photoshoot because this really lightened up our mood. I’d also like to add na you look extremely beautiful ani na date. The way you fixed your hair, the way you carried yourself in those cute outfit (favorite top, btw!). You really are stunning, lovie! Your camera can’t justify how gwapa you are. I’m just so lucky~ (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ",
+        "First time trying the photobooth at SM Ecoland. You know what I remember during this day? My long-awaited Wotakoi Dance Challenge really happened! ಥ﹏ಥ Aside from that, this was also the first time we tried Frogurt. Dili pa kaayo ka interested ato kay yogurt ice cream (and I know you don’t exactly like Yogurt) pero captivated kaayo ka sailang Christmas decoration. I’m super glad we tried it kay we now have our favorite ice cream place. ˚ʚ♡ɞ˚",
+        "Best photobooth for me! It was the best kay gi-print gyud nato ang pic nga nag-kiss ta (˵ ¬ᴗ¬˵). Kidding aside,  I love how we spent this day. Naka-TikTok pa ta bago nag-go, then we bought flowers for your birthday (which was the first time nga na-nail nato ang arrangement na gusto nato). This was also the first time na we brought a “pretty” on our photobooth sesh. Plus super lami atoang pizza and pasta dinner ani na day. Thank you sa pa-Little Italy, bubba!",
+        "First entry for 2025! I almost thought na we will break the tradition this month because we took the photo a little late na sa month ಥ﹏ಥ. But I’m glad we were able to make time for it. I’m so happy that I get to welcome the new year with you, bub. I don’t think I thanked you enough for joining us na mag-celebrate og Christmas and New Year. I’m so grateful I found the reason to celebrate holidays because of you.",
+        "Can you believe it? This was our second Valentines together! We finally found the opportunity to take a photo at Litrato.I find it touching to think that the 'pretty' thing I gave last year is something I get to receive in return this year. Thank you so much for the flowers, bub! Thank you for listening to my drama that time kay wala ko naka-receive ug Valentine surprise (lol huhu), and I’m also grateful for your message to me back then. It’s really great to celebrate heart’s day with you. -`♡´-",
+        "Tenth month, and our photobooth strip is almost complete! You know what’s the best thing that happened during this celebration? We bought our first matchy shoes! It may not be as expensive as the other shoes, or as special as living together, but what I love about this milestone is the fulfillment of realizing our plans. It feels great to accomplish something with you, bum. No matter how small it is. You know what’s next, ah? Travel, then hopefully, living together	~ 🤞",
+        "It may sound odd (literally), but the 11th month is the last item for this carousel. I’m glad to have fulfilled the mandatory 4-strip photos during our monthly celebrations. I know the next shoot we’ll have will be a special one because it’ll be an important milestone for us. But before you read the 12th message, I’d like to just appreciate how far we’ve come. We started from the 70-peso strip and now here– in a 300-peso-meal-per-head photobooth (lol). Have we explored all the photobooths in Davao? I’m positive we did. I’m proud to share this achievement with you, love! This is definitely my favorite collection. "
       ];
 
       const messageBox = document.getElementById('carousel-message');

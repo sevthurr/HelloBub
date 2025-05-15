@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cute Quiz Night!</title>
     <link rel="stylesheet" href="../css/quiz.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
@@ -19,6 +20,7 @@
           <a href="carousel.php" class="nav-link">Carousel</a>
           <a href="quiz.php" class="nav-link">Cute Quiz</a>
           <a href="letter.php" class="nav-link">Read Me</a>
+          <a href="login.php" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i></a>
 
         </nav>
       </header>
@@ -42,28 +44,86 @@
       </div>
     </div>
     <script>
-      // 15 sample questions, answers, and explanations
+      // 15 custom questions, multiple possible answers per question
       const questions = [
-        { q: "What is 2 + 2?", a: "q", e: "Because 2 plus 2 equals 4." },
-        { q: "What color is the sky on a clear day?", a: "q", e: "The sky appears blue due to Rayleigh scattering." },
-        { q: "What is the capital of France?", a: "q", e: "Paris is the capital city of France." },
-        { q: "How many days are there in a week?", a: "q", e: "There are 7 days in a week." },
-        { q: "What is the opposite of hot?", a: "q", e: "Cold is the opposite of hot." },
-        { q: "What is the first letter of the English alphabet?", a: "q", e: "The first letter is 'A'." },
-        { q: "What do bees make?", a: "q", e: "Bees make honey from nectar." },
-        { q: "What is the color of grass?", a: "q", e: "Grass is green due to chlorophyll." },
-        { q: "How many months are in a year?", a: "q", e: "There are 12 months in a year." },
-        { q: "What is the largest planet in our solar system?", a: "q", e: "Jupiter is the largest planet." },
-        { q: "What animal barks?", a: "q", e: "Dogs bark." },
-        { q: "What do you call water in its solid state?", a: "q", e: "Solid water is called ice." },
-        { q: "What is the main ingredient in bread?", a: "q", e: "Bread is mainly made from flour." },
-        { q: "What is 10 divided by 2?", a: "q", e: "10 divided by 2 is 5." },
-        { q: "What fruit is yellow and curved?", a: "q", e: "Bananas are yellow and curved." }
+        {
+          q: "What event did we attend when we first interacted with each other personally?",
+          a: "basketball game||basketball",
+          e: "Nitakas pa ka guidance ato tapos ako ga-wait saimo bago mulakaw. You were so shy and cute that time!"
+        },
+        {
+          q: "Where’s our “Tagpuan”?",
+          a: "shell||shell bangkal||petron||petron bangkal",
+          e: "We were so cute back then! I remember your outfit pa and how caring you were. You shared your jacket with me para dili ko mabasa uwu."
+        },
+        {
+          q: "When did we see each other next after the outing?",
+          a: "cafeteria||canteen||be cafeteria||be canteen",
+          e: "I was really simping when I saw you that time! You’re super focused on your papers and you look so sexy in your intern uniform."
+        },
+        {
+          q: "Where were we when we first kissed?",
+          a: "apartment||apartment ni meriam",
+          e: "You kissed me first! (I love it)"
+        },
+        {
+          q: "Where did we take our first photobooth?",
+          a: "victoria plaza||victoria",
+          e: "We wanted to just try until we got really into it!"
+        },
+        {
+          q: "What’s the best series we watched together?",
+          a: "friends",
+          e: "Definitely the best. I miss it!"
+        },
+        {
+          q: "What’s the first anime we watched together?",
+          a: "demon slayer",
+          e: "It feels like a dream!"
+        },
+        {
+          q: "What’s our favorite home-cooked meal? Hint: It’s your specialty dish",
+          a: "seafood boil",
+          e: "Best seafood boil ever!"
+        },
+        {
+          q: "Who’s the fictional character that I always use to greet you?",
+          a: "deadpool",
+          e: "You know why? Because your crazy matches my crazy, baby!"
+        },
+        {
+          q: "Which cat of yours did we  consider our first child?",
+          a: "marble",
+          e: "Just a baby. Just a little baby."
+        },
+        {
+          q: "Which crochet keychain did I give you before your mock boards?",
+          a: "clover||clover leaf||four leaf clover",
+          e: "And really nailed the “one take cutie”!"
+        },
+        {
+          q: "Where did we usually go on our dates back then—the place I want to visit again? Hint: it has something to do with candles.",
+          a: "church",
+          e: "Something about it just feels right. Let’s find the time, please!"
+        },
+        {
+          q: "When did we first visit your home?",
+          a: "holy week",
+          e: "I miss our first bus ride!"
+        },
+        {
+          q: "What was the first nickname you gave me? Hint: Green",
+          a: "grinch",
+          e: "You gave this nickname to me because I told you I hate Christmas."
+        },
+        {
+          q: "Who’s my best girl?",
+          a: "zal||onik||me||babu",
+          e: "Yes you are!"
+        }
       ];
 
       const questionsContainer = document.getElementById('questions-container');
-
-      // Track correct answers
       let correctAnswers = Array(questions.length).fill(false);
 
       questions.forEach((item, idx) => {
@@ -91,8 +151,9 @@
         goBtn.addEventListener('click', () => {
           popup.style.display = 'none';
           const userAns = input.value.trim().toLowerCase();
+          const possibleAnswers = item.a.split('||').map(ans => ans.trim().toLowerCase());
           msg.innerHTML = '';
-          if (userAns === item.a.toLowerCase()) {
+          if (possibleAnswers.includes(userAns)) {
             msg.innerHTML = `That's right, baby! <span class="explain-link" id="why-${idx}">Why?</span>`;
             correctAnswers[idx] = true;
             document.getElementById(`why-${idx}`).onclick = function(e) {
