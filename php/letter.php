@@ -137,41 +137,31 @@
 
       <main class="letter-main-flex">
         <div class="letter-image-box">
-          <img src="../images/first.jpg" alt="Letter image" class="letter-main-image" />
+          <img src="../images/anniv.jpg" alt="Letter image" class="letter-main-image" />
         </div>
         <section class="letter-body-box">
        
           <article class="letter-message">
             <p class="message-text">
-              -Just when you thought I couldn't get any cheesier
-              <br />
-              -I'm happy that I'm with you, you complete me
-              <br />
-              -I love all the moments we shared together, all the movies we
-              laughed, loved, cried, and got angry on.
-              <br />
-              -All the songs we listened and danced to.
-              <br />
-              -All the great and bland food we shared
-              <br />
-              -Even all the fights we had that proved us time to time that we
-              want this relationship to work
-              <br />
-              -I love you in every possible ways
-              <br />
-              -I love you in every programming language (eme)
-              <br />
-              -I love for who you are and how you love, my Zal.
-                            -I love you in every possible ways
-              <br />
-              -I love you in every programming language (eme)
-              <br />
-              -I love for who you are and how you love, my Zal.
-            </p>
-            <p class="signature">
+<strong>Just when you thought I couldn't get any cheesier.</strong><br>
+<br>
+Happy anniversary, Lovie! This was such a great day, wasn't it? I hope you were able to enjoy this website before reading this 12th letter. I started working on this two months ago. I thought it was just going to be a draft, but I realized I needed to top the small notebook I gave you a year ago.<br><br>
+Anyway, I just wanted to thank you for sticking with me over the past year. I know it’s not an easy relationship, but it’s definitely a peaceful and fulfilling one. I’m extremely blessed to have you in my life. You don’t just motivate me or make me feel all these butterflies—you also complete me. I love all the moments we’ve shared: all the movies we laughed at, loved, cried over, and got angry about; all the songs we listened and danced to; all the great and even the 7-below-out-of-10 foods we shared. All the places we’ve made memories in, and even all the fights we've had, proved to us time and time again that we want this relationship to work.<br><br>
+<strong>I’ll always be your lover girl.</strong><br>
+Your <strong>Bub</strong> who gives you flowers and letters whenever we celebrate something—special or not.<br>
+Your <strong>Babu</strong> who pulls your armpit hair every weekend.<br>
+Your <strong>Lovie</strong> who tells you to eat because you tend to forget.<br>
+Your <strong>Babum</strong> who washes the dishes because your nails are too pretty—they shouldn’t touch the water.<br>
+Your <strong>Grinch</strong> who has learned to love celebrating the holidays with you.<br>
+Your <strong>Chandler Bing</strong> who always tries their best to match your ‘anal’.<br>
+And your <strong>Kaye Cam</strong>—the one who will always give you butterflies.<br><br>
+I love you in every possible way. I love you in every programming language (eme).<br>I love you for who you are and how you love, my Zal. This may not be your first time experiencing an anniversary celebration, but I hope this is your most memorable one.<br><br>
+<strong>Here’s to a more amazing and bountiful year together! ٩(^ᗜ^ )و ´-</strong>
+</p>
+            <p class="signature" style = "font-weight: bold; font-size: 18px;">
               From your awkward and loving girlfriend,
               <br />
-              <span class="signature-name">Kaye</span>
+              <span class="signature-name" style = "font-weight: bold; font-size: 18px;">Kaye</span>
             </p>
           </article>
         </section>
